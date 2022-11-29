@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/next/Dockerfile
+    tty: true
+    ports:
+      - 80:3000
+    volumes:
+      - ./src:/app
+    command: sh -c "npm run dev"
+    restart: always
+    environment:
+      - WATCHPACK_POLLING=true
