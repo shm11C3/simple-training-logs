@@ -13,3 +13,18 @@ services:
     restart: always
     environment:
       - WATCHPACK_POLLING=true
+
+  firebase:
+    build:
+      context: .
+      dockerfile: ./docker/firebase/Dockerfile
+      args:
+        WORKDIR: $WORKDIR
+    tty: true
+    ports:
+      - "$FIREBASE_CLI_PORT:$FIREBASE_CLI_PORT"
+      - "$FIREBASE_UI_PORT:$FIREBASE_UI_PORT"
+      - "$FIREBASE_FUNCTIONS_PORT:$FIREBASE_FUNCTIONS_PORT"
+    volumes:
+      - ./firebase:/$WORKDIR
+    restart: always
