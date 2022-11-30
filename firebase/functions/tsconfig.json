@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2022"
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": "firebase/functions",
+    "sourceType": "module",
+  },
+}
