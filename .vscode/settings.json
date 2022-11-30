@@ -6,8 +6,6 @@
   // Prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "eslint.workingDirectories": [
-    "./src",
-    "./firebase/functions"
-  ]
+  "eslint.workingDirectories": ["./src", "./firebase/functions"],
+  "cSpell.words": ["Chakra", "Parens"]
 }
