@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Header } from '../components/templates/Header'
+import Top from '../components/views/Top'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <div></div>
+        <Top />
       </main>
 
       <footer></footer>
